@@ -6,8 +6,8 @@
   * For more info and help: https://bootstrapmade.com/php-email-form/
   */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  // TODO: Replace with your real receiving email address
+  $receiving_email_address = 'contact@hallekem.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -33,13 +33,10 @@
   );
   */
 
-  $contact->add_message( $_POST['departure'], 'City of Departure');
-  $contact->add_message( $_POST['delivery'], 'Delivery City');
-  $contact->add_message( $_POST['weight'], 'Total Weight (kg)');
-  $contact->add_message( $_POST['dimensions'], 'Dimensions (cm)');
   $contact->add_message( $_POST['name'], 'Name');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['phone'], 'Phone');
+  isset($_POST['type']) && $contact->add_message($_POST['type'], 'Project Type');
   $contact->add_message( $_POST['message'], 'Message', 10);
 
   echo $contact->send();
