@@ -82,21 +82,6 @@
                 <li><a href="404.html">404</a></li>
               </ul>
             </li>
-            
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
             <li><a href="contact.html" class="active">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -131,7 +116,7 @@
           <div class="contact-info-panel">
             <div class="contact-info-header">
               <h3>Contact Information</h3>
-              <p>Dignissimos deleniti accusamus rerum voluptate. Dignissimos rerum sit maiores reiciendis voluptate inventore ut.</p>
+              <p>Get in touch with Hallekem Limited for your civil engineering and infrastructure projects. We operate across Nigeria, Poland, Jamaica, and Romania.</p>
             </div>
 
             <div class="contact-info-cards">
@@ -141,7 +126,8 @@
                 </div>
                 <div class="card-content">
                   <h4>Our Location</h4>
-                  <p>4952 Hilltop Dr, Anytown, CA 90210</p>
+                  <p>Abuja, Nigeria (Head Office)</p>
+                  <p class="mt-2 small">Countries of Operation: Nigeria, Poland, Jamaica, Romania</p>
                 </div>
               </div>
 
@@ -151,7 +137,7 @@
                 </div>
                 <div class="card-content">
                   <h4>Email Us</h4>
-                  <p>info@example.com</p>
+                  <p>contact@hallekem.com</p>
                 </div>
               </div>
 
@@ -161,7 +147,7 @@
                 </div>
                 <div class="card-content">
                   <h4>Call Us</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <p>+234 XXX XXX XXXX</p>
                 </div>
               </div>
 
@@ -171,7 +157,8 @@
                 </div>
                 <div class="card-content">
                   <h4>Working Hours</h4>
-                  <p>Monday-Saturday: 9AM - 7PM</p>
+                  <p>Monday-Friday: 8AM - 6PM</p>
+                  <p class="mt-1 small">Saturday: 9AM - 2PM</p>
                 </div>
               </div>
             </div>
@@ -190,12 +177,12 @@
 
           <div class="contact-form-panel">
             <div class="map-container">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.789!2d7.495!3d9.076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b0a0a0a0a0%3A0x0!2sAbuja%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1234567890123!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="form-container">
               <h3>Send Us a Message</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris hendrerit faucibus imperdiet nec eget felis.</p>
+              <p>Contact us today to discuss your civil engineering and construction needs. Our team is ready to assist with your infrastructure projects.</p>
 
               <form action="forms/contact.php" method="post" class="php-email-form">
                 <div class="form-floating mb-3">
@@ -209,8 +196,25 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="subjectInput" name="subject" placeholder="Subject" required="">
-                  <label for="subjectInput">Subject</label>
+                  <input type="tel" class="form-control" id="phoneInput" name="phone" placeholder="Phone Number" required="">
+                  <label for="phoneInput">Phone Number</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="companyInput" name="company" placeholder="Company (Optional)">
+                  <label for="companyInput">Company (Optional)</label>
+                </div>
+
+                <div class="mb-3">
+                  <select class="form-select form-control" id="projectTypeInput" name="project_type" required="" style="height: 58px; padding-top: 1.625rem; padding-bottom: 0.625rem;">
+                    <option value="">Select Project Type</option>
+                    <option value="civil-engineering">Civil Engineering</option>
+                    <option value="infrastructure-maintenance">Infrastructure Maintenance</option>
+                    <option value="housing-development">Housing Development</option>
+                    <option value="project-consultancy">Project Consultancy</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <label for="projectTypeInput" class="form-label" style="position: absolute; top: 0; left: 0.75rem; height: 100%; padding: 1rem 0.75rem; pointer-events: none; border: 1px solid transparent; transform-origin: 0 0; transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;">Project Type</label>
                 </div>
 
                 <div class="form-floating mb-3">
