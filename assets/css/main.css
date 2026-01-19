@@ -1546,6 +1546,11 @@ section,
   color: #ffffff;
 }
 
+.projects .project-status.tbc {
+  background: #6b7280;
+  color: #ffffff;
+}
+
 .projects .project-title {
   font-size: 22px;
   font-weight: 700;
@@ -2008,6 +2013,8 @@ section,
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin: 4rem 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .certifications .certification-grid .cert-card {
@@ -2141,11 +2148,15 @@ section,
   .certifications .certification-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    margin: 3rem 0;
   }
 
   .certifications .certification-grid .cert-card {
     padding: 1.5rem;
     gap: 1rem;
+    position: relative;
+    width: 100%;
+    margin: 0;
   }
 
   .certifications .certification-grid .cert-card .cert-icon {
@@ -2174,17 +2185,54 @@ section,
     margin-bottom: 1rem;
   }
 
-  .certifications .cert-card {
-    flex-direction: column;
-    text-align: center;
+  .certifications .certification-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
   }
 
-  .certifications .cert-card .cert-icon {
+  .certifications .certification-grid .cert-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .certifications .certification-grid .cert-card .cert-icon {
     margin: 0 auto;
+    width: 60px;
+    height: 60px;
   }
 
   .certifications .achievements-banner {
     padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .certifications .certification-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .certifications .certification-grid .cert-card {
+    padding: 1.25rem;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .certifications .certification-grid .cert-card .cert-details h5 {
+    font-size: 1.1rem;
+  }
+
+  .certifications .certification-grid .cert-card .cert-details p {
+    font-size: 0.9rem;
   }
 
   .certifications .achievements-banner .achievement-item {
@@ -2197,6 +2245,32 @@ section,
 
   .certifications .achievements-banner .achievement-item h3 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .certifications .certification-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .certifications .certification-grid .cert-card {
+    padding: 1.25rem;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+  }
+
+  .certifications .certification-grid .cert-card .cert-details h5 {
+    font-size: 1.1rem;
+  }
+
+  .certifications .certification-grid .cert-card .cert-details p {
+    font-size: 0.9rem;
   }
 }
 
@@ -5202,4 +5276,34 @@ section,
   font-weight: 600;
   font-size: 0.9rem;
   border: 2px solid var(--accent-color);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cert-badge-text {
+    font-size: 0.75rem;
+    padding: 0.6rem 0.5rem;
+    line-height: 1.3;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cert-badge-text {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.4rem;
+    line-height: 1.2;
+    min-height: 45px;
+  }
 }
